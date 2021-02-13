@@ -10,5 +10,6 @@ bot = TelegramClient("bot2", API_KEY, API_HASH)
 
 @bot.on(events.NewMessage(incoming=True))
 async def Start(msg):
-
+    if msg.text == "/start":
+       await e.respond("Hello, I am a bot!", buttons=[[Button.inline"inline keyboard","test"],[Button.url("Link button","test2")]]) 
 
