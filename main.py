@@ -9,7 +9,16 @@ API_HASH = "your API_HASH"
 bot = TelegramClient("bot2", API_KEY, API_HASH)
 
 @bot.on(events.NewMessage(incoming=True))
-async def Start(msg):
+async def NewMessages(msg):
     if msg.text == "/start":
-       await e.respond("Hello, I am a bot!", buttons=[[Button.inline"inline keyboard","test"],[Button.url("Link button","test2")]]) 
+       await e.respond("Hello, I am a bot!", buttons=[[Button.inline"inline keyboard","test"],[Button.url("Link button","https://github.com/condonato/telethon-easy-start/")]]) 
+
+@bot.on(events.CallbackQuery())
+async def callbackQuery(cq):
+    if cq.data == b"test1":
+       await msg.edit("callback done, message edited!, buttons=[[Button.inline("back","test2")]])
+    if cq.data == b"test2":
+       await msg.edit("Hello, I am a bot!", buttons=[[Button.inline"inline keyboard","test"],[Button.url("Link button","https://github.com/condonato/telethon-easy-start/")]]) 
+
+
 
