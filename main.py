@@ -2,9 +2,9 @@ import os, json, asyncio, sys
 from telethon import TelegramClient, events, Button
 from telethon.sync import TelegramClient as TMPTelegramClient
 
-API_KEY = "123456789"
+API_KEY = "Your API_KEY"
 
-API_HASH = "your API_HASH"
+API_HASH = "Your API_HASH"
 
 bot = TelegramClient("bot2", API_KEY, API_HASH)
 
