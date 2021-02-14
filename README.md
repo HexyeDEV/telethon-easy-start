@@ -7,3 +7,6 @@ Edit the file main.py with your api_key and api_hash (get them from https://my.t
 pip3 install telethon 
 python3 main.py 
 
+<code><h1>FULL TELETHON DOCS:</h1></code>
+https://docs.telethon.dev/en/latest/
+
